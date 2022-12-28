@@ -1,4 +1,8 @@
-export const Users = ({ users }) => {
+import { withUser } from "./withUser";
+
+const Users = ({ users }) => {
+  console.log("users : " + users);
+
   return (
     <>
       <h1>Users</h1>
@@ -9,3 +13,4 @@ export const Users = ({ users }) => {
     </>
   );
 };
+export default withUser(Users);

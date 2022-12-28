@@ -1,12 +1,12 @@
 import "./styles.css";
 import { ResourceContainer } from "./ResourceContainer";
-import { Users } from "./Users";
+import Users from "./Users";
 import { Posts } from "./Posts";
 
 export default function App() {
   return (
     <div className="App">
-      <ResourceContainer
+      {/* <ResourceContainer
         resourceName="users"
         resourceUrl="https://jsonplaceholder.typicode.com/users"
       >
@@ -18,7 +18,8 @@ export default function App() {
         resourceUrl="https://jsonplaceholder.typicode.com/posts"
       >
         <Posts />
-      </ResourceContainer>
+      </ResourceContainer> */}
+      <Users />
     </div>
   );
 }
