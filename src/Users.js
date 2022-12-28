@@ -1,8 +1,8 @@
+import { useUser } from "./useUser";
 import { withResource } from "./withResource";
 
-const Users = ({ users }) => {
-  console.log("users : " + JSON.stringify(users));
-
+const Users = () => {
+  const users = useUser();
   return (
     <>
       <h1>Users</h1>
@@ -13,8 +13,4 @@ const Users = ({ users }) => {
     </>
   );
 };
-export default withResource(
-  Users,
-  "users",
-  "https://jsonplaceholder.typicode.com/users"
-);
+export default Users;
