@@ -1,7 +1,7 @@
-import { withUser } from "./withUser";
+import { withResource } from "./withResource";
 
 const Users = ({ users }) => {
-  console.log("users : " + users);
+  console.log("users : " + JSON.stringify(users));
 
   return (
     <>
@@ -13,4 +13,8 @@ const Users = ({ users }) => {
     </>
   );
 };
-export default withUser(Users);
+export default withResource(
+  Users,
+  "users",
+  "https://jsonplaceholder.typicode.com/users"
+);
